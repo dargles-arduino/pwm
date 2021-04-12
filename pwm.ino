@@ -47,5 +47,6 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   reading = analogRead(ANALOGUE_IN);    // read the input pin
-  analogWrite(ANALOGUE_IN, reading/4);  // analogRead values go from 0 to 1023, analogWrite values from 0 to 255
+  analogWrite(MOTOR_PIN, reading/4);  // analogRead values go from 0 to 1023, analogWrite values from 0 to 255
+  Serial.println(reading);
 }
